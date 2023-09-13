@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0;
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* __________________ */
+:root[data-theme=white] {
+  --body-bg-color: whitesmoke;
+  --post-main-color: #b54f4f;
+  --post-second-color: #4361ee;
+  --post-bg-color: #03aa837b;
+  --post-text-color: #3a0ca3;
+  --text-second-color: #4361ee4d;
+}
+
+:root[data-theme=dark] {
+  --body-bg-color: #606060;
+  --post-main-color: #a8a8a8;
+  --post-second-color: #90a4ff;
+  --post-bg-color: #bffff07a;
+  --post-text-color: #c6adff;
+  --text-second-color: #d7ddf8;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-bg-color);
+}
+
+header {
+  background-color: #333;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.317);
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.317);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+.top-header p {
+  width: 45%;
+  color: rgba(255, 255, 255, 0.7333333333);
+  padding: 10px;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 1.5ch;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.3rem;
+}
+.top-header h2 {
+  margin: 10px 0;
+  color: #333;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7333333333);
+  border-radius: 30px;
+  border: 3px solid transparent;
+}
+
+.console {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px 20px;
+}
+.console #custom-console {
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.7333333333);
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.console #custom-console div {
+  margin-bottom: 8px;
+}
+.console #custom-console div:first-child {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.5333333333);
+}
+.console #custom-console div .log-prefix {
+  color: #f0a;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.console #custom-console div .log-content {
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+.console #custom-console div .error-log {
+  color: #f00;
+  font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  background-color: #090a0f;
+  background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+  overflow: hidden;
+}
+
+body {
+  background: transparent;
+}
+
+head::before, head::after,
+body::before, body::after {
+  display: block;
+  font-size: 52px;
+  color: transparent;
+}
+
+head::before, head::after,
+body::before, body::after {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: ".";
+  mix-blend-mode: screen;
+  -webkit-animation: 44s -27s move infinite ease-in-out alternate;
+          animation: 44s -27s move infinite ease-in-out alternate;
+}
+
+body::before {
+  text-shadow: 2.0967959661em 1.3667079011em 7px hsla(49.8677751238, 100%, 50%, 0.9), 0.5496717324em 1.3595701069em 7px hsla(97.9761819373, 100%, 50%, 0.9), -0.1741782118em -0.1322297142em 7px hsla(46.3133014417, 100%, 50%, 0.9), 0.7517670393em 0.6182626784em 7px hsla(48.2024328381, 100%, 50%, 0.9), 0.2387387484em 1.6491284363em 7px hsla(170.6089185782, 100%, 50%, 0.9), 1.7466863787em -0.2908825252em 7px hsla(276.2772022726, 100%, 50%, 0.9), 1.3615625959em 0.1782092053em 7px hsla(332.7105744283, 100%, 50%, 0.9), -0.4430921726em 0.559048663em 7px hsla(82.2828508217, 100%, 50%, 0.9), 1.4711370891em 0.4666626762em 7px hsla(191.034714768, 100%, 50%, 0.9), 2.3702165353em 0.287575312em 7px hsla(140.9957273915, 100%, 50%, 0.9), -0.1334630606em 0.124507775em 7px hsla(231.3735104111, 100%, 50%, 0.9);
+  -webkit-animation-duration: 44s;
+          animation-duration: 44s;
+  -webkit-animation-delay: -27s;
+          animation-delay: -27s;
+}
+
+body::after {
+  text-shadow: 0.7692368812em 1.85387092em 7px hsla(52.1248271613, 100%, 50%, 0.9), 2.1495043261em 0.5450589482em 7px hsla(161.0307650172, 100%, 50%, 0.9), 0.5284710476em 2.1792813864em 7px hsla(351.1366206656, 100%, 50%, 0.9), 0.6602436873em -0.3856565085em 7px hsla(173.1115752582, 100%, 50%, 0.9), 1.9111548948em 1.6214342171em 7px hsla(202.3755869387, 100%, 50%, 0.9), 0.1203180747em 1.9958707467em 7px hsla(22.3397943316, 100%, 50%, 0.9), 2.1872445024em 2.3969788965em 7px hsla(294.4998448305, 100%, 50%, 0.9), -0.0183793093em 1.6618072689em 7px hsla(45.1831924039, 100%, 50%, 0.9), -0.1554278658em 1.477090449em 7px hsla(10.4321064157, 100%, 50%, 0.9), 1.8420653604em 2.2821582004em 7px hsla(130.3801829773, 100%, 50%, 0.9), 2.3546983929em 1.6816383894em 7px hsla(47.3954661239, 100%, 50%, 0.9);
+  -webkit-animation-duration: 43s;
+          animation-duration: 43s;
+  -webkit-animation-delay: -32s;
+          animation-delay: -32s;
+}
+
+head::before {
+  text-shadow: 2.2653666438em -0.0660987219em 7px hsla(36.2356928172, 100%, 50%, 0.9), 0.7007768229em 1.9418375566em 7px hsla(37.9933266082, 100%, 50%, 0.9), 0.3254231995em 0.7031850457em 7px hsla(297.7213790833, 100%, 50%, 0.9), 0.0156588309em 0.3157125928em 7px hsla(167.6843313091, 100%, 50%, 0.9), 1.3243064858em 2.0358026767em 7px hsla(67.4467172851, 100%, 50%, 0.9), 0.1369462337em 0.7959244725em 7px hsla(91.604566151, 100%, 50%, 0.9), 1.0368891981em 1.6690282157em 7px hsla(99.8922653319, 100%, 50%, 0.9), -0.1684468207em 0.731657933em 7px hsla(88.5874363183, 100%, 50%, 0.9), 0.2408619121em 1.8610294285em 7px hsla(93.3311621303, 100%, 50%, 0.9), 0.6880365363em 1.0304204156em 7px hsla(329.8333047542, 100%, 50%, 0.9), 0.2861472969em 1.4700024149em 7px hsla(19.0732484232, 100%, 50%, 0.9);
+  -webkit-animation-duration: 42s;
+          animation-duration: 42s;
+  -webkit-animation-delay: -23s;
+          animation-delay: -23s;
+}
+
+head::after {
+  text-shadow: 1.4635035739em 0.4519825137em 7px hsla(212.8973314262, 100%, 50%, 0.9), 2.0987966446em -0.1259014607em 7px hsla(76.4715794988, 100%, 50%, 0.9), 2.4080634662em 0.3966376224em 7px hsla(221.7008468721, 100%, 50%, 0.9), 1.1765195255em 2.2013749911em 7px hsla(54.7642840926, 100%, 50%, 0.9), 2.3435124869em 1.6765065537em 7px hsla(222.1033361259, 100%, 50%, 0.9), 1.1241167842em 0.1616674127em 7px hsla(55.6418287929, 100%, 50%, 0.9), 0.0094284554em 1.9647765887em 7px hsla(0.1080167851, 100%, 50%, 0.9), -0.2086832077em -0.2251847763em 7px hsla(281.373200523, 100%, 50%, 0.9), 2.4948462708em 2.3946380922em 7px hsla(17.5125511877, 100%, 50%, 0.9), 2.458221207em 1.804925277em 7px hsla(27.3789240698, 100%, 50%, 0.9), 2.1937078937em 1.3578679825em 7px hsla(88.220097821, 100%, 50%, 0.9);
+  -webkit-animation-duration: 41s;
+          animation-duration: 41s;
+  -webkit-animation-delay: -19s;
+          animation-delay: -19s;
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: rotate(0deg) scale(12) translateX(-20px);
+            transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(18) translateX(20px);
+            transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: rotate(0deg) scale(12) translateX(-20px);
+            transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(18) translateX(20px);
+            transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}/*# sourceMappingURL=style.css.map */
